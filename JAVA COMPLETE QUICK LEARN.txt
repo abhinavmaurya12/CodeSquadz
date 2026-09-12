@@ -1,0 +1,1241 @@
+
+ # _****JAVA COMPLETE QUICK LEARN****_
+
+ ## 1\. Java Basics
+
+ 1. **Java:** High-level, class-based, object-oriented, statically typed language.
+2. **JDK:** Tools required to develop Java applications.
+3. **JRE:** Runtime environment for Java applications.
+4. **JVM:** Executes Java bytecode.
+5. **JDK = JRE + Development Tools.**
+6. **JRE = JVM + Runtime Libraries.**
+7. **JVM:** Platform dependent; **Java bytecode:** Platform independent.
+8. **WORA:** Write Once, Run Anywhere.
+9. **Source File:** `.java`
+10. **Bytecode File:** `.class`
+11. **Compiler:** `javac` converts source code → bytecode.
+12. **JVM:** Bytecode → machine instructions.
+13. **JIT:** Compiles frequently executed bytecode to native code at runtime.
+14. **Main Method:** `public static void main(String[] args)`.
+15. **Java is pass-by-value:** Even object references are passed by value.
+
+---
+
+ # 2\. Java Syntax
+
+ 16. **Statement:** Usually ends with `;`.
+17. **Block:** Code enclosed in `{}`.
+18. **Comment:** `//`, `/* */`, `/** */`.
+19. **Identifier:** Name given to class, method, variable, etc.
+20. **Keyword:** Reserved word such as `class`, `static`, `final`.
+21. **Case Sensitive:** `Name` and `name` are different.
+22. **Class Name:** Conventionally PascalCase.
+23. **Variable/Method:** Conventionally camelCase.
+24. **Constant:** Conventionally `UPPER_CASE`.
+25. **Package:** Conventionally lowercase.
+
+---
+
+ # 3\. Data Types
+
+ 26. **Primitive Types:** `byte, short, int, long, float, double, char, boolean`.
+27. **byte:** 8-bit signed integer.
+28. **short:** 16-bit signed integer.
+29. **int:** 32-bit signed integer.
+30. **long:** 64-bit signed integer.
+31. **float:** 32-bit floating-point.
+32. **double:** 64-bit floating-point.
+33. **char:** 16-bit unsigned UTF-16 code unit.
+34. **boolean:** `true` or `false`.
+35. **Reference Type:** Stores a reference to an object.
+36. **Local Variable:** Must be initialized before use.
+37. **Instance Variable:** Gets default value.
+38. **Static Variable:** Shared by class instances.
+39. **`final` Variable:** Cannot be reassigned after initialization.
+40. **Type Casting:** Converting one type into another.
+41. **Widening:** Smaller compatible type → larger type; usually automatic.
+42. **Narrowing:** Larger → smaller; explicit cast required.
+
+---
+
+ # 4\. Operators
+
+ 43. **Arithmetic:** `+ - * / %`
+44. **Relational:** `> < >= <= == !=`
+45. **Logical:** `&& || !`
+46. **Assignment:** `= += -= *= /= %=`
+47. **Unary:** `++ -- + - !`
+48. **Ternary:** `condition ? x : y`
+49. **Bitwise:** `& | ^ ~`
+50. **Shift:** `<< >> >>>`
+51. **`&&`:** Short-circuit AND.
+52. **`||`:** Short-circuit OR.
+53. **`==`:** Primitive value comparison/reference identity comparison.
+54. **`equals()`:** Logical equality when properly overridden.
+
+---
+
+ # 5\. Control Flow
+
+ 55. **if:** Executes code when condition is true.
+56. **if-else:** Chooses between two paths.
+57. **else-if:** Tests multiple conditions.
+58. **switch:** Selects based on a value/pattern.
+59. **for:** Loop with initialization, condition, update.
+60. **while:** Checks condition before iteration.
+61. **do-while:** Executes body at least once.
+62. **break:** Terminates nearest loop/switch.
+63. **continue:** Skips current loop iteration.
+64. **return:** Exits method and optionally returns value.
+65. **Enhanced for:** Convenient traversal of arrays/iterables.
+
+---
+
+ # 6\. Class & Object
+
+ 66. **Class:** Blueprint/template.
+67. **Object:** Runtime instance of class.
+68. **`new`:** Creates an object.
+69. **Reference Variable:** Stores reference to object.
+70. **Instance Member:** Belongs to object.
+71. **Static Member:** Belongs to class.
+72. **Object State:** Data/field values.
+73. **Object Behavior:** Methods.
+74. **Object Identity:** Distinguishes one object from another.
+
+---
+
+ # 7. Constructor
+
+ 75. **Constructor:** Initializes object during creation.
+76. **Constructor Name:** Same as class.
+77. **Constructor:** Has no return type.
+78. **Default Constructor:** Compiler supplies one only if no constructor is declared.
+79. **Parameterized Constructor:** Accepts arguments.
+80. **Constructor Overloading:** Multiple constructors with different parameter lists.
+81. **Copy Constructor:** User-defined constructor that copies another object's state.
+82. **Constructor Chaining:** Constructor calls another constructor.
+83. **`this()`:** Calls constructor in same class.
+84. **`super()`:** Calls parent constructor.
+85. **`this()`/`super()`:** Must be first constructor statement.
+86. **Constructor:** Cannot be `static`, `final`, or `abstract`.
+
+---
+
+ # 8\. `this` & `super`
+
+ 87. **`this`:** Current object reference.
+88. **`this.field`:** Access current object's field.
+89. **`this.method()`:** Call current object's method.
+90. **`this()`:** Call another constructor.
+91. **`super`:** Parent-class context/reference.
+92. **`super.field`:** Access parent field.
+93. **`super.method()`:** Call parent implementation.
+94. **`super()`:** Call parent constructor.
+
+---
+
+ # 9\. Initialization
+
+ 95. **Instance Initialization Block:** Runs during object initialization before constructor body.
+96. **Static Initialization Block:** Runs when class is initialized.
+97. **Static initialization:** Generally happens once per class initialization.
+98. **Instance fields/blocks:** Run for each object creation.
+99. **Typical order:** Parent static → child static → parent instance → child instance → parent constructor → child constructor.
+
+---
+
+ # 10\. OOP
+
+ 100. **Encapsulation:** Bundle data + behavior and control access.
+101. **Inheritance:** Reuse/extend parent behavior.
+102. **Polymorphism:** One reference/interface can represent different implementations.
+103. **Abstraction:** Hide implementation complexity.
+104. **IS-A:** Inheritance relationship.
+105. **HAS-A:** Composition/aggregation relationship.
+106. **Compile-Time Polymorphism:** Overloading.
+107. **Runtime Polymorphism:** Overriding.
+108. **Upcasting:** Child object referenced by parent type.
+109. **Downcasting:** Parent reference explicitly cast to child type.
+110. **Dynamic Method Dispatch:** Overridden instance method selected according to runtime object.
+111. **Fields:** Are not polymorphically overridden like instance methods.
+112. **Static Methods:** Hidden, not overridden.
+113. **Private Methods:** Not overridden because they are not inherited.
+
+---
+
+ # 11\. Inheritance
+
+ 114. **Inheritance:** `extends`.
+115. **Single:** One parent → one child.
+116. **Multilevel:** A → B → C.
+117. **Hierarchical:** One parent → many children.
+118. **Multiple Class Inheritance:** Not directly supported.
+119. **Multiple Interface Inheritance:** Supported.
+120. **Parent:** Superclass.
+121. **Child:** Subclass.
+122. **Object:** Ultimate superclass of ordinary Java classes.
+123. **`super`:** Access immediate parent members.
+124. **Overriding:** Child replaces inherited method implementation.
+
+---
+
+ # 12\. Encapsulation & Access Modifiers
+
+ 125. **private:** Same class only.
+126. **default/package-private:** Same package.
+127. **protected:** Same package + qualifying subclass access.
+128. **public:** Wherever accessible.
+129. **Getter:** Reads private field.
+130. **Setter:** Modifies private field.
+131. **Encapsulation:** Usually private fields \+ controlled methods.
+
+---
+
+ # 13\. Abstraction
+
+ 132. **Abstract Class:** Cannot be directly instantiated.
+133. **Abstract Method:** Declaration without implementation.
+134. **Abstract Class:** Can contain abstract \+ concrete methods.
+135. **Abstract Class:** Can have constructor and fields.
+136. **Interface:** Defines a contract/type.
+137. **Class implements Interface:** `implements`.
+138. **Interface extends Interface:** `extends`.
+139. **Interface:** Can extend multiple interfaces.
+140. **Class:** Can implement multiple interfaces.
+
+---
+
+ # 14\. Interface
+
+ 141. **Interface fields:** Implicitly `public static final`.
+142. **Abstract interface methods:** Implicitly public unless private/static/default rules apply.
+143. **Default Method:** Interface method with implementation.
+144. **Static Interface Method:** Belongs to interface.
+145. **Private Interface Method:** Used internally by interface methods.
+146. **Functional Interface:** Exactly one abstract method.
+147. **`@FunctionalInterface`:** Compiler verifies functional-interface contract.
+148. **Marker Interface:** Interface with no methods, e.g. `Serializable`.
+
+---
+
+ # 15\. `static`
+
+ 149. **Static Variable:** One shared class-level variable.
+150. **Static Method:** Called without object.
+151. **Static Block:** Initializes static state.
+152. **Static Method:** Cannot directly access instance fields/methods.
+153. **Static Method:** Can access static members directly.
+154. **`main()`:** Static so JVM can invoke it without creating application object.
+
+---
+
+ # 16\. `final`
+
+ 155. **Final Variable:** Cannot be reassigned.
+156. **Final Method:** Cannot be overridden.
+157. **Final Class:** Cannot be extended.
+158. **Final Reference:** Reference cannot change, but referenced mutable object's state may change.
+159. **Blank Final:** Final variable initialized later exactly once.
+
+---
+
+ # 17\. String
+
+ 160. **String:** Immutable sequence of characters.
+161. **String:** Located in `java.lang`.
+162. **String Literal:** Usually stored/reused through String pool.
+163. **`new String()`:** Creates a distinct String object.
+164. **`equals()`:** Compares String content.
+165. **`==`:** Compares references for Strings.
+166. **`length()`:** String length.
+167. **`charAt()`:** Character at index.
+168. **`substring()`:** Extracts part of String.
+169. **`contains()`:** Checks substring.
+170. **`startsWith()`:** Checks prefix.
+171. **`endsWith()`:** Checks suffix.
+172. **`indexOf()`:** Finds position.
+173. **`replace()`:** Replaces characters/sequences.
+174. **`split()`:** Splits using regex.
+175. **`trim()`:** Removes certain leading/trailing whitespace.
+176. **`strip()`:** Unicode-aware whitespace removal.
+177. **String:** Thread-safe due to immutability.
+
+---
+
+ # 18\. StringBuilder / StringBuffer
+
+ 178. **StringBuilder:** Mutable character sequence.
+179. **StringBuffer:** Mutable + synchronized methods.
+180. **StringBuilder:** Usually preferred for single-threaded manipulation.
+181. **Default Capacity:** 16.
+182. **`append()`:** Add at end.
+183. **`insert()`:** Insert.
+184. **`delete()`:** Remove.
+185. **`reverse()`:** Reverse.
+186. **`capacity()`:** Current capacity.
+
+---
+
+ # 19\. Arrays
+
+ 187. **Array:** Fixed-size collection of elements of one component type.
+188. **Array:** Object in Java.
+189. **Index:** Starts at `0`.
+190. **Length:** `array.length`.
+191. **Array Size:** Fixed after creation.
+192. **Multidimensional Array:** Array of arrays.
+193. **Default int value:** `0`.
+194. **Default boolean:** `false`.
+195. **Default reference:** `null`.
+196. **`Arrays.sort()`:** Sort array.
+197. **`Arrays.binarySearch()`:** Binary search in appropriately sorted array.
+198. **`Arrays.copyOf()`:** Copies array.
+
+---
+
+ # 20\. Wrapper Classes
+
+ 199. **Wrapper:** Object form of primitive.
+200. **byte → Byte**
+201. **short → Short**
+202. **int → Integer**
+203. **long → Long**
+204. **float → Float**
+205. **double → Double**
+206. **char → Character**
+207. **boolean → Boolean**
+208. **Autoboxing:** Primitive → wrapper.
+209. **Unboxing:** Wrapper → primitive.
+210. **Integer Caching:** Common small Integer values may be cached.
+
+---
+
+ # 21\. Object Class
+
+ 211. **Object:** Root class for ordinary Java classes.
+212. **`toString()`:** Text representation.
+213. **`equals()`:** Logical equality.
+214. **`hashCode()`:** Hash value.
+215. **`getClass()`:** Runtime class.
+216. **`wait()`:** Wait while releasing monitor.
+217. **`notify()`:** Wake one waiting thread.
+218. **`notifyAll()`:** Wake all waiting threads.
+219. **`clone()`:** Legacy copying mechanism; often avoided.
+220. **`equals()` \+ `hashCode()`:** Must follow their contract.
+
+---
+
+ # 22\. Exception Handling
+
+ 221. **Throwable:** Root of exceptions/errors.
+222. **Exception:** Conditions applications may often handle.
+223. **Error:** Serious JVM/system problems.
+224. **Checked Exception:** Compiler requires handling/declaring.
+225. **Unchecked Exception:** RuntimeException and subclasses.
+226. **`try`:** Risky code.
+227. **`catch`:** Handles exception.
+228. **`finally`:** Cleanup code.
+229. **`throw`:** Actually throws exception.
+230. **`throws`:** Declares possible propagated exceptions.
+231. **Exception Propagation:** Travels up call stack.
+232. **Custom Exception:** User-defined exception class.
+233. **Try-With-Resources:** Automatically closes `AutoCloseable` resources.
+234. **Multiple Catch:** Multiple exception types can be handled.
+235. **Catch Order:** More specific exceptions before broader ones.
+
+---
+
+ # 23\. `throw` vs `throws`
+
+ 236. **throw:** Inside code.
+237. **throws:** Method declaration.
+238. **throw:** Throws an exception object.
+239. **throws:** Lists exception types.
+240. **throw:** One exception object at a time per statement.
+241. **throws:** Can declare multiple exception types.
+
+---
+
+ # 24\. `final` vs `finally` vs `finalize`
+
+ 242. **final:** Keyword.
+243. **finally:** Exception-handling block.
+244. **finalize():** Deprecated/obsolete cleanup mechanism; don't use it for resource management.
+245. **Resource Cleanup:** Prefer try-with-resources.
+
+---
+
+ # 25\. Garbage Collection
+
+ 246. **GC:** Automatic memory reclamation.
+247. **Garbage:** Object no longer reachable.
+248. **Heap:** Main object-allocation memory.
+249. **GC Roots:** Sources from which reachability is determined.
+250. **`System.gc()`:** Request, not guarantee.
+251. **Memory Leak:** Unwanted reachable objects can still consume memory.
+252. **Reference Types:** Strong, Soft, Weak, Phantom references.
+
+---
+
+ # 26\. Collections
+
+ 253. **Collection Framework:** APIs for groups of objects.
+254. **Collection:** Main interface hierarchy for List/Set/Queue.
+255. **Map:** Key-value structure; not a subtype of Collection.
+256. **List:** Ordered, duplicates generally allowed.
+257. **Set:** No duplicate elements.
+258. **Queue:** Processing-oriented collection.
+259. **Deque:** Double-ended queue.
+
+---
+
+ # 27\. List
+
+ 260. **ArrayList:** Resizable array.
+261. **LinkedList:** Doubly linked structure \+ Deque.
+262. **Vector:** Legacy synchronized dynamic array.
+263. **Stack:** Legacy LIFO class; `Deque` generally preferred.
+264. **ArrayList:** Fast random access.
+265. **LinkedList:** Efficient insertion/removal when node position is already known.
+266. **ArrayList:** Usually preferred for general List usage.
+
+---
+
+ # 28\. Set
+
+ 267. **HashSet:** Hash-based, no guaranteed iteration order.
+268. **LinkedHashSet:** Maintains insertion order.
+269. **TreeSet:** Sorted set.
+270. **Set:** Uses equality/hash or comparison rules depending on implementation.
+271. **TreeSet:** Typically `O(log n)` basic operations.
+
+---
+
+ # 29\. Map
+
+ 272. **HashMap:** Hash-based key-value structure.
+273. **LinkedHashMap:** Predictable insertion/access ordering.
+274. **TreeMap:** Sorted by keys.
+275. **Hashtable:** Legacy synchronized map; no null keys/values.
+276. **ConcurrentHashMap:** Concurrent map.
+277. **HashMap:** Allows one null key and multiple null values.
+278. **Map Key:** Should have stable `equals()`/`hashCode()` behavior while stored.
+
+---
+
+ # 30\. Iterator
+
+ 279. **Iterator:** Traverses collection.
+280. **`hasNext()`:** Checks next element.
+281. **`next()`:** Returns next element.
+282. **`remove()`:** Removes last returned element where supported.
+283. **ListIterator:** Bidirectional traversal for Lists.
+284. **Fail-Fast:** Many iterators detect structural modification and may throw `ConcurrentModificationException`.
+285. **Fail-Fast:** Best-effort behavior, not a thread-safety mechanism.
+
+---
+
+ # 31\. Generics
+
+ 286. **Generics:** Compile-time type safety.
+287. **`<T>`:** Type parameter.
+288. **Generic Class:** Class with type parameter.
+289. **Generic Method:** Method with type parameter.
+290. **Wildcard:** `?`.
+291. **Upper Bound:** `? extends Number`.
+292. **Lower Bound:** `? super Integer`.
+293. **PECS:** Producer Extends, Consumer Super.
+294. **Type Erasure:** Generic type information is largely removed from runtime representation.
+295. **Generics:** Cannot directly use primitive type arguments; use wrappers.
+
+---
+
+ # 32\. Comparable & Comparator
+
+ 296. **Comparable:** Natural ordering.
+297. **`compareTo()`:** Comparable method.
+298. **Comparator:** External/custom ordering.
+299. **`compare()`:** Comparator method.
+300. **Comparable:** Usually one natural ordering.
+301. **Comparator:** Multiple sorting strategies possible.
+302. **`Comparator.comparing()`:** Convenient comparator creation.
+303. **`thenComparing()`:** Secondary sorting criterion.
+304. **`reversed()`:** Reverse comparator order.
+
+---
+
+ # 33\. Sorting Algorithms
+
+ 305. **Bubble Sort:** Repeated adjacent swaps; average `O(n²)`.
+306. **Selection Sort:** Repeatedly selects minimum; `O(n²)`.
+307. **Insertion Sort:** Inserts each item into sorted portion; average `O(n²)`.
+308. **Merge Sort:** Divide and merge; `O(n log n)`.
+309. **Quick Sort:** Partition-based; average `O(n log n)`, worst `O(n²)`.
+310. **Heap Sort:** Heap-based; `O(n log n)`.
+311. **Counting Sort:** Non-comparison sort for suitable bounded integer ranges.
+312. **Radix Sort:** Digit-based sorting for suitable data.
+313. **Stable Sort:** Equal elements retain relative order when stability is guaranteed.
+314. **Java sorting:** Use library sorting unless implementing algorithm for learning/interview purposes.
+
+---
+
+ # 34\. Searching
+
+ 315. **Linear Search:** Checks elements sequentially; `O(n)`.
+316. **Binary Search:** Requires sorted data; `O(log n)`.
+317. **Two Pointer:** Often used for sorted arrays/string problems.
+318. **Sliding Window:** Efficient for contiguous range problems.
+319. **Hashing:** Can provide near `O(1)` average lookup.
+320. **BFS:** Breadth-first graph/tree traversal.
+321. **DFS:** Depth-first graph/tree traversal.
+
+---
+
+ # 35\. Lambda
+
+ 322. **Lambda:** Concise representation of behavior.
+323. **Syntax:** `(parameters) -> expression/body`.
+324. **Lambda:** Commonly targets functional interfaces.
+325. **Lambda:** Can capture effectively-final local variables.
+326. **Method Reference:** Shorter lambda form when applicable.
+
+---
+
+ # 36\. Functional Interface
+
+ 327. **Functional Interface:** Exactly one abstract method.
+328. **Predicate:** Takes input → boolean.
+329. **Function:** Input → output.
+330. **Consumer:** Input → no result.
+331. **Supplier:** No input → result.
+332. **UnaryOperator:** Same input/output type.
+333. **BinaryOperator:** Two same-type inputs → same-type result.
+
+---
+
+ # 37\. Stream API
+
+ 334. **Stream:** Pipeline for processing data.
+335. **Stream:** Does not itself store collection data.
+336. **Intermediate Operation:** Returns Stream.
+337. **Terminal Operation:** Produces final result/side effect.
+338. **Lazy:** Intermediate operations generally execute only when terminal operation runs.
+339. **`filter()`:** Select.
+340. **`map()`:** Transform.
+341. **`flatMap()`:** Flatten nested streams.
+342. **`distinct()`:** Remove duplicates.
+343. **`sorted()`:** Sort.
+344. **`limit()`:** Take first N.
+345. **`skip()`:** Skip first N.
+346. **`peek()`:** Mainly debugging/inspection; avoid relying on it for essential side effects.
+347. **`forEach()`:** Process each element.
+348. **`collect()`:** Gather results.
+349. **`reduce()`:** Combine elements.
+350. **`count()`:** Count elements.
+351. **`anyMatch()`:** At least one.
+352. **`allMatch()`:** All.
+353. **`noneMatch()`:** None.
+354. **`findFirst()`:** First element.
+355. **`findAny()`:** Any element.
+356. **Parallel Stream:** Can process in parallel but isn't automatically faster.
+
+---
+
+ # 38\. Advanced Collectors
+
+ 357. **`Collectors.toList()`:** Collect into List.
+358. **`toSet()`:** Collect into Set.
+359. **`joining()`:** Join Strings.
+360. **`groupingBy()`:** Group elements by key.
+361. **`partitioningBy()`:** Divide into true/false groups.
+362. **`counting()`:** Count.
+363. **`mapping()`:** Map values inside collector.
+364. **`summarizingInt()`:** Statistics for integers.
+365. **`maxBy()` / `minBy()`:** Find maximum/minimum.
+
+---
+
+ # 39\. Optional
+
+ 366. **Optional:** Container representing possible presence/absence.
+367. **`of()`:** Requires non-null value.
+368. **`ofNullable()`:** Allows null input.
+369. **`empty()`:** Empty Optional.
+370. **`isPresent()`:** Checks value.
+371. **`ifPresent()`:** Executes action when present.
+372. **`orElse()`:** Provides fallback.
+373. **`orElseGet()`:** Lazily generates fallback.
+374. **`orElseThrow()`:** Throws when empty.
+375. **Avoid:** Using Optional merely to replace every nullable field/parameter.
+
+---
+
+ # 40\. Date & Time
+
+ 376. **`LocalDate`:** Date without time zone.
+377. **`LocalTime`:** Time without date/time zone.
+378. **`LocalDateTime`:** Date + time without zone.
+379. **`ZonedDateTime`:** Date + time + zone.
+380. **`Instant`:** Point on UTC timeline.
+381. **`Duration`:** Time-based amount.
+382. **`Period`:** Date-based amount.
+383. **`DateTimeFormatter`:** Formats/parses date/time.
+384. **Modern API:** `java.time`.
+385. **Modern Date/Time:** Immutable and generally thread-safe.
+
+---
+
+ # 41\. Enum
+
+ 386. **Enum:** Fixed set of named constants.
+387. **Enum:** Can have fields/methods/constructors.
+388. **`values()`:** Returns constants.
+389. **`valueOf()`:** Converts name to enum constant.
+390. **Enum Constructor:** Cannot be called directly.
+
+---
+
+ # 42\. Nested Classes
+
+ 391. **Static Nested Class:** Does not require enclosing object.
+392. **Inner Class:** Non-static nested class tied to enclosing instance.
+393. **Local Class:** Declared inside method/block.
+394. **Anonymous Class:** Class without explicit name.
+395. **Anonymous Object:** Object whose reference isn't stored in a variable.
+396. **Anonymous Class ≠ Anonymous Object.**
+
+---
+
+ # 43\. I/O
+
+ 397. **I/O:** Input/output between program and external resources.
+398. **Byte Stream:** `InputStream` / `OutputStream`.
+399. **Character Stream:** `Reader` / `Writer`.
+400. **FileInputStream:** Byte input from file.
+401. **FileOutputStream:** Byte output to file.
+402. **FileReader:** Character input.
+403. **FileWriter:** Character output.
+404. **BufferedReader:** Buffered character reading.
+405. **BufferedWriter:** Buffered character writing.
+406. **PrintWriter:** Convenient text output.
+407. **High-Level Stream:** Wraps another stream for extra functionality.
+408. **Low-Level Stream:** Directly connects closer to data source/destination.
+
+---
+
+ # 44\. NIO / NIO.2
+
+ 409. **NIO:** Modern I/O APIs.
+410. **`Path`:** Represents filesystem path.
+411. **`Files`:** File/directory utility methods.
+412. **`Paths`:** Legacy/convenience API for creating Path objects.
+413. **Channel:** Connection for I/O operations.
+414. **Buffer:** Container for data used with channels.
+415. **Selector:** Enables multiplexed non-blocking I/O.
+416. **`Files.readString()`:** Reads file as String.
+417. **`Files.writeString()`:** Writes String to file.
+
+---
+
+ # 45\. Serialization
+
+ 418. **Serialization:** Object state → byte stream.
+419. **Deserialization:** Byte stream → object.
+420. **Serializable:** Marker interface.
+421. **`transient`:** Excludes field from default serialization.
+422. **`serialVersionUID`:** Serialization compatibility identifier.
+423. **Security:** Never deserialize untrusted data blindly.
+
+---
+
+ # 46\. Multithreading
+
+ 424. **Thread:** Unit of execution.
+425. **Process:** Independent execution environment.
+426. **Multithreading:** Multiple threads execute concurrently.
+427. **`Thread`:** Represents thread.
+428. **`Runnable`:** Represents task returning no result.
+429. **`Callable`:** Task that can return result/throw checked exception.
+430. **`start()`:** Starts new thread.
+431. **`run()`:** Task body; direct call doesn't create new thread.
+432. **`sleep()`:** Pauses current thread.
+433. **`join()`:** Waits for thread completion.
+434. **`interrupt()`:** Cooperative interruption request.
+435. **Daemon Thread:** Background/service thread.
+436. **JVM:** Can terminate when no live non-daemon threads remain.
+
+---
+
+ # 47\. Thread Lifecycle
+
+ 437. **NEW:** Created but not started.
+438. **RUNNABLE:** Eligible/running according to JVM/OS scheduling.
+439. **BLOCKED:** Waiting for monitor lock.
+440. **WAITING:** Waiting indefinitely.
+441. **TIMED\_WAITING:** Waiting for limited time.
+442. **TERMINATED:** Finished execution.
+
+---
+
+ # 48\. Synchronization
+
+ 443. **Race Condition:** Result depends on timing.
+444. **Synchronization:** Controls shared mutable state.
+445. **`synchronized` Method:** Uses intrinsic monitor.
+446. **Synchronized Block:** Locks selected monitor.
+447. **Lock:** Controls access to critical sections.
+448. **Deadlock:** Threads wait forever for each other.
+449. **Starvation:** Thread repeatedly fails to obtain resources.
+450. **Livelock:** Threads keep responding to each other but make no progress.
+451. **Thread Safety:** Correct behavior under concurrent access.
+
+---
+
+ # 49\. `volatile`
+
+ 452. **volatile:** Provides visibility guarantees.
+453. **volatile:** Does not make compound operations automatically atomic.
+454. **Example:** `count++` is not made atomic merely by `volatile`.
+455. **Atomic Classes:** Useful for atomic operations.
+
+---
+
+ # 50\. Locks
+
+ 456. **ReentrantLock:** Explicit lock implementation.
+457. **ReadWriteLock:** Separate read/write locking.
+458. **ReentrantReadWriteLock:** Common implementation.
+459. **Lock:** Should generally be released in `finally`.
+460. **tryLock():** Attempts lock without necessarily waiting indefinitely.
+
+---
+
+ # 51\. Executor Framework
+
+ 461. **Executor:** Separates task submission from execution.
+462. **ExecutorService:** Manages task execution/lifecycle.
+463. **Thread Pool:** Reuses worker threads.
+464. **`submit()`:** Submits task and returns Future.
+465. **`execute()`:** Executes Runnable without Future result.
+466. **`shutdown()`:** Stops accepting new tasks.
+467. **`shutdownNow()`:** Attempts to stop running tasks.
+468. **Future:** Represents asynchronous result.
+469. **Callable:** Returns result.
+470. **FutureTask:** Runnable + Future implementation.
+
+---
+
+ # 52\. Concurrency Utilities
+
+ 471. **AtomicInteger:** Atomic integer operations.
+472. **AtomicLong:** Atomic long operations.
+473. **AtomicReference:** Atomic reference operations.
+474. **CountDownLatch:** Wait until count reaches zero.
+475. **CyclicBarrier:** Threads wait at common barrier.
+476. **Semaphore:** Controls number of permits.
+477. **BlockingQueue:** Queue supporting blocking operations.
+478. **ConcurrentHashMap:** Concurrent map.
+479. **CopyOnWriteArrayList:** Good for many reads/few writes scenarios.
+480. **ConcurrentLinkedQueue:** Non-blocking concurrent queue.
+
+---
+
+ # 53\. Inter-Thread Communication
+
+ 481. **`wait()`:** Releases monitor and waits.
+482. **`notify()`:** Wakes one waiter.
+483. **`notifyAll()`:** Wakes all waiters.
+484. **`wait/notify`:** Must be used with corresponding monitor ownership.
+485. **Modern Alternative:** Prefer higher-level concurrency utilities where appropriate.
+
+---
+
+ # 54\. JVM Architecture
+
+ 486. **Class Loader:** Loads classes.
+487. **Bytecode Verifier:** Checks bytecode validity/safety.
+488. **Runtime Data Areas:** JVM-managed memory areas.
+489. **Heap:** Objects/arrays.
+490. **Stack:** Per-thread execution frames.
+491. **PC Register:** Current instruction position per thread.
+492. **Native Method Stack:** Supports native method execution.
+493. **Metaspace:** HotSpot native memory area for class metadata.
+494. **JIT:** Runtime compilation.
+495. **Interpreter:** Executes bytecode instruction-by-instruction.
+
+---
+
+ # 55\. Class Loading
+
+ 496. **Loading:** Finds/loads class bytes.
+497. **Linking:** Verification + preparation \+ resolution.
+498. **Initialization:** Executes static initialization.
+499. **Bootstrap Class Loader:** Loads core platform classes.
+500. **Platform Class Loader:** Loads platform classes.
+501. **Application Class Loader:** Loads application classpath/module-path classes.
+502. **Parent Delegation:** Class loaders commonly delegate loading to parent first.
+
+---
+
+ # 56\. JVM Memory
+
+ 503. **Heap:** Shared among application threads.
+504. **Stack:** Separate for each thread.
+505. **Metaspace:** Class metadata in HotSpot.
+506. **StackOverflowError:** Often caused by deep recursion.
+507. **OutOfMemoryError:** Allocation/resource limits cannot be satisfied.
+508. **Memory Leak:** Objects remain reachable unnecessarily.
+509. **Escape Analysis:** JVM optimization analyzing object/thread escape behavior.
+
+---
+
+ # 57\. Garbage Collectors
+
+ 510. **Serial GC:** Single-threaded collector.
+511. **Parallel GC:** Throughput-oriented parallel collector.
+512. **G1 GC:** Region-based general-purpose collector.
+513. **ZGC:** Low-pause collector designed for very large heaps.
+514. **Shenandoah:** Low-pause collector available in relevant OpenJDK distributions.
+515. **GC Goal:** Reclaim unreachable objects.
+516. **GC:** Does not guarantee when an object is collected.
+
+---
+
+ # 58\. Immutability
+
+ 517. **Immutable Object:** State cannot change after construction.
+518. **String:** Immutable.
+519. **Immutable Class:** Usually final + private final fields + no mutating methods.
+520. **Defensive Copy:** Protect mutable internal state.
+521. **Immutable Objects:** Naturally easier to share safely between threads.
+
+---
+
+ # 59\. JDBC
+
+ 522. **JDBC:** Java Database Connectivity.
+523. **Driver:** Connects Java application to database.
+524. **Connection:** Database connection.
+525. **Statement:** Executes SQL.
+526. **PreparedStatement:** Parameterized SQL.
+527. **CallableStatement:** Calls stored procedure.
+528. **ResultSet:** Query result.
+529. **`executeQuery()`:** Usually SELECT.
+530. **`executeUpdate()`:** Usually INSERT/UPDATE/DELETE/DDL with update count semantics.
+531. **Commit:** Saves transaction changes.
+532. **Rollback:** Reverts uncommitted changes.
+533. **Transaction:** Group of operations treated as unit.
+534. **PreparedStatement:** Helps prevent SQL injection when parameters are used properly.
+
+---
+
+ # 60\. Networking
+
+ 535. **Socket:** Endpoint for network communication.
+536. **ServerSocket:** Traditional TCP server listener.
+537. **TCP:** Reliable connection-oriented protocol.
+538. **UDP:** Connectionless datagram protocol.
+539. **IP:** Identifies network endpoint/address.
+540. **Port:** Identifies service/application endpoint.
+541. **HTTP:** Application protocol for web communication.
+542. **Java HttpClient:** Modern Java HTTP client API.
+543. **URI:** Identifies a resource.
+544. **URL:** Locator concept; `URI` is the preferred modern abstraction for many uses.
+
+---
+
+ # 61\. Regex
+
+ 545. **Regex:** Pattern matching text.
+546. **Pattern:** Compiled regex.
+547. **Matcher:** Performs matching.
+548. **`matches()`:** Attempts entire input match.
+549. **`find()`:** Finds matching subsequences.
+550. **`replaceAll()`:** Regex replacement.
+551. **`\\d`:** Digit.
+552. **`\\s`:** Whitespace.
+553. **`\\w`:** Word character.
+
+---
+
+ # 62\. Annotations
+
+ 554. **Annotation:** Metadata.
+555. **`@Override`:** Indicates intended override.
+556. **`@Deprecated`:** Marks API as deprecated.
+557. **`@SuppressWarnings`:** Suppresses compiler warnings.
+558. **`@FunctionalInterface`:** Functional-interface contract.
+559. **Custom Annotation:** Developer-created metadata annotation.
+560. **Retention:** Controls how long annotation information is retained.
+
+---
+
+ # 63\. Reflection
+
+ 561. **Reflection:** Inspect/manipulate types at runtime.
+562. **`Class<?>`:** Runtime class metadata.
+563. **Reflection:** Can access constructors, fields, methods subject to access rules.
+564. **Use Cases:** Frameworks, dependency injection, testing, serialization.
+565. **Downside:** Can reduce readability/type safety and introduce runtime failures.
+
+---
+
+ # 64\. Modules
+
+ 566. **Module System:** Introduced in Java 9.
+567. **`module-info.java`:** Module descriptor.
+568. **`requires`:** Module dependency.
+569. **`exports`:** Packages exposed to other modules.
+570. **`opens`:** Allows reflective access to packages.
+571. **`uses`:** Declares service usage.
+572. **`provides ... with`:** Declares service implementation.
+
+---
+
+ # 65\. Records
+
+ 573. **Record:** Concise data-carrier class.
+574. **Record:** Automatically provides accessors, constructor, `equals`, `hashCode`, `toString`.
+575. **Record Accessor:** `name()` rather than `getName()`.
+576. **Record:** Can contain methods and validation.
+577. **Record Components:** Final-like state; record is not automatically deeply immutable.
+
+---
+
+ # 66\. Sealed Classes
+
+ 578. **Sealed Class:** Restricts permitted subclasses.
+579. **`permits`:** Specifies permitted subclasses.
+580. **Subclass:** Must be `final`, `sealed`, or `non-sealed`.
+581. **Sealed Interfaces:** Can restrict implementing types.
+
+---
+
+ # 67\. Pattern Matching
+
+ 582. **Pattern Matching:** Combines type testing with variable binding.
+583. **`instanceof` Pattern:** `if (x instanceof String s)`.
+584. **Pattern Switch:** Can match types/patterns in switch.
+585. **Record Pattern:** Can destructure record components.
+586. **Pattern Matching:** Reduces casting boilerplate.
+
+---
+
+ # 68\. Modern Java
+
+ 587. **Java 8:** Lambda, Stream, Optional, functional interfaces, modern Date/Time.
+588. **Java 9:** Modules.
+589. **Java 10:** `var`.
+590. **Java 11:** Standard HTTP Client and other APIs.
+591. **Java 14:** Switch expressions became standard.
+592. **Java 15:** Text blocks became standard.
+593. **Java 16:** Records became standard; pattern matching for `instanceof`.
+594. **Java 17:** Sealed classes became standard.
+595. **Java 21:** Virtual threads, record patterns, pattern matching for switch became standard.
+596. **Java 22–25:** Continued language, JVM, library and performance improvements.
+597. **LTS:** Long-Term Support releases are commonly preferred for production stability.
+
+---
+
+ # 69\. Virtual Threads
+
+ 598. **Virtual Thread:** Lightweight JVM-managed thread.
+599. **Virtual Threads:** Useful for high-concurrency blocking workloads.
+600. **Virtual Thread:** Not a replacement for CPU parallelism.
+601. **Platform Thread:** Typically backed by OS thread.
+602. **Virtual Thread:** Can support very large numbers of concurrent tasks.
+
+---
+
+ # 70\. SOLID
+
+ 603. **S — Single Responsibility:** One class should have one primary reason to change.
+604. **O — Open/Closed:** Open for extension, closed for modification.
+605. **L — Liskov Substitution:** Subtypes should be substitutable for base types.
+606. **I — Interface Segregation:** Prefer focused interfaces.
+607. **D — Dependency Inversion:** Depend on abstractions, not concrete implementations.
+
+---
+
+ # 71\. Design Patterns
+
+ 608. **Singleton:** One controlled instance.
+609. **Factory:** Creates objects without exposing creation logic.
+610. **Abstract Factory:** Creates related object families.
+611. **Builder:** Step-by-step construction of complex objects.
+612. **Prototype:** Creates objects by copying prototypes.
+613. **Adapter:** Makes incompatible interfaces work together.
+614. **Decorator:** Adds behavior dynamically.
+615. **Facade:** Simplifies complex subsystem.
+616. **Proxy:** Controls/accesses another object.
+617. **Strategy:** Encapsulates interchangeable algorithms.
+618. **Observer:** One-to-many notification relationship.
+619. **Template Method:** Defines algorithm skeleton.
+620. **Command:** Encapsulates request as object.
+
+---
+
+ # 72\. DSA Fundamentals
+
+ 621. **Data Structure:** Way to organize data.
+622. **Algorithm:** Step-by-step solution.
+623. **Time Complexity:** Measures growth of execution work.
+624. **Space Complexity:** Measures extra memory growth.
+625. **O(1):** Constant.
+626. **O(log n):** Logarithmic.
+627. **O(n):** Linear.
+628. **O(n log n):** Common efficient sorting complexity.
+629. **O(n²):** Quadratic.
+630. **O(2ⁿ):** Exponential.
+631. **O(n!):** Factorial.
+
+---
+
+ # 73\. DSA Structures
+
+ 632. **Array:** Fixed contiguous-like indexed storage abstraction.
+633. **Linked List:** Nodes connected by references.
+634. **Stack:** LIFO.
+635. **Queue:** FIFO.
+636. **Deque:** Insert/remove at both ends.
+637. **Hash Table:** Key-based lookup.
+638. **Tree:** Hierarchical structure.
+639. **BST:** Binary Search Tree.
+640. **Heap:** Priority-oriented tree structure.
+641. **Graph:** Vertices + edges.
+642. **Trie:** Prefix tree.
+643. **Priority Queue:** Retrieves highest/lowest priority according to ordering.
+
+---
+
+ # 74\. Common DSA Techniques
+
+ 644. **Two Pointer:** Two moving indexes/references.
+645. **Sliding Window:** Maintain moving range.
+646. **Prefix Sum:** Precompute cumulative values.
+647. **Hashing:** Fast lookup/counting.
+648. **Binary Search:** Search ordered search space.
+649. **Recursion:** Function calls itself.
+650. **Backtracking:** Explore choices and undo choices.
+651. **Greedy:** Make locally optimal choices.
+652. **Divide & Conquer:** Divide → solve → combine.
+653. **Dynamic Programming:** Reuse overlapping subproblem results.
+654. **BFS:** Queue-based traversal.
+655. **DFS:** Stack/recursion-based traversal.
+656. **Topological Sort:** Ordering of DAG dependencies.
+657. **Union-Find:** Tracks connected components efficiently.
+
+---
+
+ # 75\. Recursion
+
+ 658. **Recursion:** Method calls itself.
+659. **Base Case:** Stops recursion.
+660. **Recursive Case:** Calls itself with smaller/different problem.
+661. **Stack:** Stores recursive calls.
+662. **Infinite Recursion:** Can cause `StackOverflowError`.
+
+---
+
+ # 76\. Important Java Interview Differences
+
+ 677. **JDK vs JRE:** Development vs runtime.
+678. **JRE vs JVM:** Runtime environment vs execution engine.
+679. **`==` vs `equals()`:** Identity/value semantics vs logical equality.
+680. **String vs StringBuilder:** Immutable vs mutable.
+681. **StringBuilder vs StringBuffer:** Unsynchronized mutable vs synchronized mutable.
+682. **Array vs ArrayList:** Fixed size vs resizable List.
+683. **ArrayList vs LinkedList:** Array-backed vs linked structure.
+684. **HashSet vs TreeSet:** Hash-based vs sorted.
+685. **HashMap vs Hashtable:** Modern general-purpose map vs legacy synchronized map.
+686. **HashMap vs ConcurrentHashMap:** Non-concurrent vs concurrent design.
+687. **Comparable vs Comparator:** Natural vs external ordering.
+688. **Overloading vs Overriding:** Different parameters vs inherited method replacement.
+689. **Abstract Class vs Interface:** Shared state/implementation vs contract/multiple type inheritance.
+690. **Checked vs Unchecked:** Compile-time handling requirement vs runtime exception hierarchy.
+691. **throw vs throws:** Throw object vs declare exceptions.
+692. **final vs finally:** Restriction keyword vs cleanup block.
+693. **Process vs Thread:** Independent execution environment vs execution unit.
+694. **sleep vs wait:** Sleep doesn't release monitor; wait releases the object's monitor.
+695. **`start()` vs `run()`:** Starts new thread vs normal method call when invoked directly.
+696. **`volatile` vs `synchronized`:** Visibility/order guarantees vs mutual exclusion \+ memory synchronization.
+
+---
+
+ # 77\. Common Coding Problems
+
+ 697. **Reverse String:** Use loop/StringBuilder.
+698. **Palindrome:** Compare characters from both ends.
+699. **Anagram:** Frequency count/sorting.
+700. **Character Frequency:** HashMap/int frequency array.
+701. **Duplicate Elements:** Set/HashMap.
+702. **First Non-Repeating Character:** Frequency map + traversal.
+703. **Fibonacci:** Iteration/DP preferred over naive recursion.
+704. **Factorial:** Loop or recursion.
+705. **Prime Number:** Check divisors up to √n.
+706. **Armstrong Number:** Sum powered digits.
+707. **Reverse Number:** Repeated `% 10` and `/ 10`.
+708. **Missing Number:** Sum/XOR techniques.
+709. **Two Sum:** HashMap.
+710. **Merge Arrays:** Two-pointer approach when sorted.
+711. **Binary Search:** Sorted data.
+712. **Merge Sort:** Divide and conquer.
+713. **Quick Sort:** Partition.
+714. **Balanced Parentheses:** Stack.
+715. **Linked List Cycle:** Fast/slow pointers.
+716. **Tree Traversal:** Preorder, inorder, postorder, level order.
+717. **Graph Traversal:** BFS/DFS.
+718. **Top K Elements:** Heap/frequency techniques.
+719. **Longest Substring Without Repeating:** Sliding window + HashMap/Set.
+
+---
+
+ # 78\. Java Best Practices
+
+ 720. **Use meaningful names.**
+721. **Keep classes/methods focused.**
+722. **Prefer immutability when practical.**
+723. **Program to interfaces.**
+724. **Favor composition over inheritance when appropriate.**
+725. **Use `private` fields by default.**
+726. \*\*Override `equals()` and `hashCode()` together.
+727. **Use try-with-resources for closeable resources.**
+728. **Don't catch `Exception` blindly.**
+729. **Don't use exceptions for normal control flow.**
+730. **Prefer `StringBuilder` for repeated string mutation.**
+731. **Use generics instead of raw collections.**
+732. **Use `List`/`Map` interfaces in declarations when appropriate.**
+733. **Prefer `ExecutorService`/structured concurrency approaches over manually creating huge numbers of threads.**
+734. **Don't depend on `finalize()`.**
+735. **Validate external input.**
+736. **Use parameterized SQL.**
+737. **Don't expose mutable internal collections directly.**
+738. **Document public APIs.**
+739. **Write unit tests.**
+740. **Keep methods small and cohesive.**
+
+---
+
+ # 79\. Quick Java Memory Rules
+
+ 741. **Primitive variable:** Stores primitive value.
+742. **Reference variable:** Stores reference.
+743. **Object:** Usually allocated on heap.
+744. **Local variables:** Associated with stack frames conceptually.
+745. **Static state:** Associated with class rather than each object.
+746. **String literals:** Interned/pool-managed.
+747. **`null`:** No object reference.
+748. **Null reference method call:** Can cause `NullPointerException`.
+749. **Array bounds violation:** `ArrayIndexOutOfBoundsException`.
+750. **Invalid cast:** `ClassCastException`.
+751. **Integer parsing failure:** `NumberFormatException`.
+
+---
+
+ # 80\. Most Important Java Rules
+
+ 752. **Java is pass-by-value.**
+753. **Constructor has no return type.**
+754. **Constructor cannot be inherited.**
+755. **Constructor cannot be overridden.**
+756. **Static methods are hidden, not overridden.**
+757. **Private methods are not overridden.**
+758. **Final methods cannot be overridden.**
+759. **Final classes cannot be inherited.**
+760. **Abstract classes cannot be instantiated directly.**
+761. **Interface cannot normally be instantiated directly.**
+762. **Class can extend one class.**
+763. **Class can implement multiple interfaces.**
+764. **Interface can extend multiple interfaces.**
+765. **Java doesn't support multiple inheritance of classes.**
+766. **String is immutable.**
+767. **Arrays have fixed size.**
+768. **Array indexing starts at zero.**
+769. **Map is not a Collection.**
+770. **HashMap does not guarantee iteration order.**
+771. **TreeMap sorts by keys.**
+772. **TreeSet sorts elements.**
+773. **Comparable defines natural ordering.**
+774. **Comparator defines custom ordering.**
+775. **`start()` creates thread execution; direct `run()` call does not.**
+776. **`sleep()` does not release intrinsic locks.**
+777. **`wait()` releases the object's monitor.**
+778. **`volatile` does not make `count++` atomic.**
+779. **GC is automatic but timing is not guaranteed.**
+780. **`System.gc()` is only a request.**
+781. **`finally` normally executes even when exception occurs, but abrupt JVM termination can prevent it.**
+782. **`System.exit()` initiates JVM shutdown and should not be used as normal cleanup.**
+783. **Try-with-resources automatically closes resources.**
+784. **Optional is not a universal replacement for null.**
+785. **Streams are generally single-use.**
+786. **Parallel streams are not automatically faster.**
+
+---
+
+ # 81\. Final Java Revision Formula
+
+ ### _****Remember Java Like This****_
+
+ **JDK** → Develop\
+ **JRE** → Run\
+ **JVM** → Execute
+
+ **Class** → Blueprint\
+ **Object** → Instance
+
+ **Encapsulation** → Protect\
+ **Inheritance** → Reuse\
+ **Polymorphism** → Many forms\
+ **Abstraction** → Hide complexity
+
+ **Overloading** → Compile time\
+ **Overriding** → Runtime
+
+ **`this`** → Current object\
+ **`super`** → Parent
+
+ **`final`** → Restrict\
+ **`finally`** → Cleanup\
+ **`throw`** → Throw\
+ **`throws`** → Declare
+
+ **String** → Immutable\
+ **StringBuilder** → Mutable\
+ **Array** → Fixed size\
+ **ArrayList** → Resizable List
+
+ **HashSet** → Unique\
+ **TreeSet** → Sorted unique\
+ **HashMap** → Key/value\
+ **TreeMap** → Sorted keys
+
+ **Comparable** → Natural sorting\
+ **Comparator** → Custom sorting
+
+ **Lambda** → Function/behavior\
+ **Stream** → Data processing\
+ **Optional** → Possible value
+
+ **Thread** → Execution unit\
+ **Synchronization** → Shared-state protection\
+ **ExecutorService** → Thread/task management\
+ **Virtual Thread** → Lightweight concurrency
+
+ **Heap** → Objects\
+ **Stack** → Thread execution frames\
+ **Metaspace** → Class metadata in HotSpot\
+ **GC** → Reclaims unreachable objects
+
+ **JDBC** → Database\
+ **I/O/NIO** → Files/data\
+ **Socket/HTTP** → Network
+
+ **Record** → Data carrier\
+ **Sealed** → Restricted inheritance\
+ **Pattern Matching** → Cleaner type handling\
+ **Module** → Strong application/platform modularity
+
+ **SOLID** → Good design\
+ **Design Patterns** → Reusable design solutions\
+ **DSA** → Problem solving

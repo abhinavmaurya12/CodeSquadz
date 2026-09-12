@@ -1,0 +1,30 @@
+9) What is difference between C++ and java?
+
+Easy Example 
+
+C++:
+
+Source Code
+    ↓
+Compiler
+    ↓
+Machine Code
+    ↓
+Operating System
+
+Java:
+
+Source Code
+    ↓
+Compiler
+    ↓
+Bytecode
+    ↓
+JVM
+    ↓
+Operating System
+Easy definition to remember
+
+C++ is generally platform-dependent and supports features like pointers and multiple inheritance
+through classes, while Java uses bytecode 
+and JVM to provide platform independence and automatic memory management.

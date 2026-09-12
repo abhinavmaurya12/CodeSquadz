@@ -1,0 +1,187 @@
+JAVA CORE INTERVIEW QUESTIONS
+1) What are static blocks and static initializers in java?
+2) How to call one constructor from the other constructor?
+3) What is method overriding in java?
+4) What is super keyword in java?
+5) Difference between method overloading and method overriding in java?
+6) Difference between abstract class and interface?
+7) Why java is platform independent?
+8) What is method overloading in java?
+9) What is difference between C++ and java?
+10) What is JIT compiler?
+11) What is bytecode in java?
+12) Difference between this() and super() in java?
+13) What is a class?
+14) What is an object?
+15) What is method in java?
+16) What is encapsulation?
+17) Why main() method is public, static and void in java?
+public:
+"public" is an access specifier which can be used outside the class. When main method is declared public it means it
+can be used outside the class.
+static:
+To call a method we require object. Sometimes it may be required to call a method without creating the object. With
+the help of object, static method can be used outside the class. JVM calls the main() method without help of object.
+Then we declare that method as static.
+void:
+Then we declare keyword type is used when a method doesn't return any value — main() method doesn't return any
+value.
+18) Explain about main() method in java?
+19) What is constructor in java?
+20) What is difference between length and length() method in java?
+21) What is ASCII Code?
+ASCII stands for American Standard code for information Interchange. ASCII character set is 0 to 255. We can't add
+more characters to the ASCII Character set. ASCII character set supports only English.
+22) What is Unicode?
+Unicode is a character set developed by Unicode Consortium. To support all languages in the world Java uses
+Unicode. Unicode characters were represented by 16 bits and its character range is 0–65,535. We can't add more
+characters to the ASCII Character set. ASCII character set supports only English. That is the reason, if we see C
+language we can write a language only in English — we can't write in other languages because it uses ASCII code.
+23) Difference between Character Constant and String Constant in java?
+Character constant is enclosed in single quotes. Character constants are single digit or character. String constants are
+enclosed in double quotes. String constants are collection of characters.
+Ex: '2', 'A'
+Ex: "Hello World"
+24) What are constants and how to create constants in java?
+Constants are fixed values whose values cannot be changed during the execution of program. We create constants in
+java using final keyword.
+Ex: final int number = 10;
+Ex: final String str = "java-interview-questions";
+25) Difference between '>>' and '>>>' operators in java?
+'>>' is a right shift operator — shifts all of the bits in a value to the right a specified number of times.
+'>>>' is an unsigned right shift operator, used to shift right. The bits shifted in from the left are filled with zeroes.
+Example: int a = ...; a >> 3;
+26) Explain Java Coding Standards for classes (or Java coding conventions for classes)?
+Sun has created Java Coding standards for classes / Java Coding Conventions. It is highly recommended to follow
+these standards.
+• Classnames should start with an uppercase letter.
+• Classnames should be nouns.
+• If the class name has multiple words, the first letter of each inner word must be capital (CamelCase).
+Ex: Employee, EmployeeDetails, ArrayList, TreeSet, HashSet
+27) Explain Java Coding standards for interfaces?
+• Interface names should start with an uppercase letter.
+• Interface names should be adjectives.
+Example: Runnable, Serializable, Marker, Cloneable
+28) Explain Java Coding standards for Methods?
+• Method names should start with a small (lowercase) letter.
+• Method names are usually verbs.
+• If method names are a combination of multiple words, every inner word should start with an uppercase
+letter.
+Ex: toString()
+Ex: public abstract void getDetails();
+29) Explain Java Coding Standards for variables?
+• Variable names should start with a small letter.
+• Variable names should be nouns.
+• Short, meaningful names are recommended.
+• If there are multiple words, every inner word should start with an uppercase character.
+Ex: string, value, empName, employeeId
+30) Explain Java Coding Standards for Constants?
+• Constants in java are created using static and final keywords.
+• Constant names contain only uppercase letters. If the constant name is a combination of two words, it
+should be separated by an underscore.
+Example:
+public class InstanceOfExample {
+ public static void main(String[] args) {
+ Integer x = new Integer(5);
+ if (x instanceof java.lang.Integer) {
+ System.out.println(true);
+ } else {
+ System.out.println(false);
+ }
+ }
+}
+Ex: MAX_VALUE, MIN_VALUE, MAX_PRIORITY, MIN_PRIORITY
+31) Difference between overriding and overloading in java?
+32) What is 'IS-A' relationship in java?
+33) What is 'HAS-A' relationship in java?
+34) Difference between 'IS-A' and 'HAS-A' relationship in java?
+35) Explain about instanceof operator in java?
+36) What does null mean in java?
+When a reference variable doesn't point to any value, it is assigned null.
+37) Can we have multiple classes in a single file?
+38) What all access modifiers are allowed for a top-level class?
+39) What are packages in java?
+40) Can we have more than one package statement in a source file in java?
+41) Can we define a package statement after an import statement in java?
+42) What are identifiers in a java program?
+Identifiers can be class names, method names, or variable names.
+Rules for defining identifiers in java:
+• Identifiers can't start with a number.
+• Identifiers must start with a letter, underscore (_) or dollar ($) sign.
+• Identifiers are case sensitive.
+• There is no limit on the number of characters in an identifier, but it is not recommended to have more
+characters.
+• First letter can be an alphabet, underscore, or dollar sign. From the second letter onward, we can also have
+numbers.
+• We should not use reserved words as identifiers in java.
+43) What are access modifiers in java?
+Access control is an important feature of encapsulation. By preventing misuse of a class, methods and members
+through access modification, we can control access.
+44) What is the difference between access specifiers and access modifiers in java?
+In C++, we have access specifiers: public, private, protected. But there is no such division of access specifiers and
+access modifiers in java — in java we have access modifiers and non-access modifiers.
+Access Modifiers:
+public, private, protected, default.
+Non-Access Modifiers:
+abstract, static, final.
+45) What access modifiers can be used for a class?
+We can use only two access modifiers for a class in java: public and default.
+• A class with the public modifier can be accessed from anywhere.
+• A class with the default modifier can be accessed only within the same package.
+46) Explain what access modifiers can be used for methods?
+We can use all access modifiers — public, private, protected and default — for methods.
+public:
+When a method is declared public it can be accessed:
+• In the same class
+• In the same package — subclass
+• In the same package — non-subclass
+• In a different package — subclass
+• In a different package — non-subclass
+default:
+When a method is declared with default access, it can be accessed:
+• In the same class
+• In the same package — subclass
+• In the same package — non-subclass
+It cannot be accessed in a different package (subclass or non-subclass).
+47) Explain what access modifiers can be used for variables?
+We can use all access modifiers — public, private, protected and default — for variables.
+public:
+When a variable is declared public it can be accessed:
+• In the same class
+• In the same package — subclass
+• In the same package — non-subclass
+• In a different package — subclass
+• In a different package — non-subclass
+default:
+When a variable is declared default it can be accessed:
+• In the same class
+• In the same package — subclass
+• In the same package — non-subclass
+We cannot access default-access variables from a different package.
+protected:
+A protected variable can be accessed:
+• Within the same class
+• Within the same package — subclass
+• Within the same package — non-subclass
+• Within a different package — subclass
+It cannot be accessed from a non-subclass in a different package.
+private:
+When a variable is declared private, it can be accessed only within that class.
+48) What is the final access modifier in java?
+49) Explain about abstract classes in java?
+For example, if we take a Vehicle class, we cannot provide implementation for it because there may be twowheelers, four-wheelers, etc. At that moment we make the Vehicle class abstract. Any class which extends Vehicle
+will provide the important features of abstract methods and concrete methods to provide implementation. It's the
+responsibility of the subclasses to provide the method implementation. Abstract classes cannot be instantiated.
+Though we cannot instantiate abstract classes, we can create object references. An abstract class can contain either 0
+or more abstract methods.
+50) Can we create a constructor in an abstract class?
+We can create a constructor in an abstract class; it doesn't give any compilation error. But since we cannot
+instantiate the class, there is no direct use in creating a constructor for an abstract class — it is used when a subclass
+constructor calls super().
+51) What are abstract methods in java?
+An abstract method is a method which doesn't have any body. Abstract methods are declared with the keyword
+abstract and a semicolon in place of the method body.
+Signature:
+public abstract void <methodName>();
+Ex: public abstract void getDetails();
+It is the responsibility of the subclass to provide implementation for the abstract method defined in the abstract class.

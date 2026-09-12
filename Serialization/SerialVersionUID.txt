@@ -1,0 +1,49 @@
+
+The serialization compiletime associates with each serializable class a version number, 
+called a serialVersionUID, which is used during deserialization to verify that the sender
+ and receiver of a serialized object have loaded classes for that object that are compatible 
+ with respect to serialization. If the receiver has loaded a class for the object that has a 
+ different serialVersionUID than that of the corresponding sender's class, then deserialization
+ will result in an InvalidClassException. A serializable class can declare its own serialVersionUID 
+ explicitly by declaring a field named "serialVersionUID" that must be static, final, and of type long:
+
+ANY-ACCESS-MODIFIER static final long serialVersionUID = 42L;
+
+If a serializable class does not explicitly declare a serialVersionUID, then the serialization
+ compiletime will calculate a default serialVersionUID value for that class based on various aspects
+ of the class, as described in the Java Object Serialization Specification. However, it is strongly 
+ recommended that all serializable classes explicitly declare serialVersionUID values, since the 
+ default serialVersionUID computation is highly sensitive to class details that may vary depending 
+ on compiler implementations,many details including fields in your class, there access modifier, the
+ interface they implement and even different Compiler implementations, any change on class or using 
+ different compiler may result in different SerialVersionUID, which many eventually stop reloading
+ serialized data. It's too risky to rely on Java Serialization mechanism for generating this id, and 
+ that's why it's recommended to declare explicit SerialVersionUID in your Serializable class and can 
+ thus result in unexpected InvalidClassExceptions during deserialization.
+
+
+You can use JDK's serialver tool to generate SerialVersionUID for classes.
+
+$ serialver -classpath . emp
+Emp:    static final long SerialVersionUID = -4862926644813433707L;
+----------------------------------------------------------------------------
+
+
+Now we know what is SerialVersionUID and why it's important to declare it in Serializable class,
+ it's time to revise some of the important fact, related to Java SerialVersionUID.
+
+1) SerialVersionUID is used to version serialized data. You can only de-serialize a class 
+if it's SerialVersionUID matches with the serialized instance.
+
+2) When we don't declare SerialVersionUID in our class, Java compiletime generates it for us, 
+but that process is sensitive to many class meta data including number of fields, type of fields,
+ access modifier of fields, interface implemented by class etc.
+
+3) It's recommended to declare SerialVersionUID as private static final long variable to avoid 
+default mechanism
+
+4) You can even use serialver tool from JDK to generate Serial Version for classes in Java.
+
+5) It's Serialization best practice in Java to explicitly declare SerialVersionUID, to 
+avoid any issues during de-serialization especially if you are running a client server 
+application which relies on serialized data e.g. RMI.

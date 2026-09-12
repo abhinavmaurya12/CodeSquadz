@@ -1,0 +1,62 @@
+#if ,else, elseif, switch:
+1. check if a student will pass or fail.
+2. use switch case to build a calculator.
+#loop :
+3. Print number from 1 to 10.
+4. print number from 1 to n.
+5. print sum of first n natural number.
+6. print square pattern.
+7. print reverse of a number n= 10899 to n =99801.
+8. keep entering number till user enter multiple of 10.
+9. display all number enter by user except multiple of 10.
+#Pattern :
+1. print star pattern.
+2. print inverted star pattern.
+3. print half pyramid pattern.
+4. print character pattern.
+#Function / Methods :
+1. find product of a & b.
+2. factorial of number n.
+3. binomial co-efficient.
+4. check if number is prime or not .
+5. print all prime in a range.
+6. convert from binary to decimal.
+7. convert from decimal to binary.
+#Advance Pattern :
+1. print hollow rectangle pattern.
+*********
+*       *
+*       *
+*********
+2. invert rotated half pyramid.
+   *
+  **
+ ***
+****
+3. invert half pyramid with number.
+12345
+1234
+123
+12
+1
+4. floyd's triangle.
+1
+23
+456
+78910
+5. 0-1 triangle
+1
+01
+101
+0101
+6. butterfly pattern.
+7. solid rhombus.  
+    ****
+   ****
+  ****
+ ****
+****
+8. hollow rhombus
+9. diamond pattern 
+#opps:
+
